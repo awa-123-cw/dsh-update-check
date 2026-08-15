@@ -1,0 +1,8 @@
+# dsh-update-check bundle patch：向 web 组合挂载 dsh-update-check。
+# host half：探测本地 DSH 版本/环境信息，注册 /dsh-update-check/info 与
+#           /dsh-update-check/check（代理 npm registry dist-tags）两个端点，
+#           并在用户设置注册 lastCheck* 持久化字段。
+# client half：设置页新增「关于」栏位，展示版本/环境信息 + 一键检测更新。
+- insert:
+    - id: dsh-update-check
+      name: dsh-update-check

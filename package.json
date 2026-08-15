@@ -1,0 +1,23 @@
+{
+  "name": "dsh-update-check",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "DSH 设置页「关于」栏位：展示本地版本与环境信息，一键检测 npm 最新版本并给出升级指引（DSH 无自动更新机制，检测到新版本后需手动升级）",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "license": "MIT"
+}
